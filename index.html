@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Time to forget about receipts and manual tracking, shift to Expense Tracker and track your money. Just one tap and transaction is added. With simple UI, it is accessible by each age group."
+    />
+    <meta
+      name="keywords"
+      content="expense, tracker, income, savings, money, transactions"
+    />
+    <title>Expense Tracker | Track your money</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="(max-width:500px)" href="mobile.css" />
+    <link rel="stylesheet" media="(max-width:768px) and (min-width:501px)" href="tablet.css"/>
+    <link rel="stylesheet" media="(min-width:1025px)" href="widescreen.css" />
+    <link rel="stylesheet" media="(max-height:500px)" href="landscape.css" />
+    <link rel="stylesheet" media="(max-height:750px)" href="extra.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="./expenses.png" />
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div class="splash">
+      <svg
+        class="fade-in"
+        xml:space="preserve"
+        viewBox="0 0 100 100"
+        y="0"
+        x="0"
+        xmlns="http://www.w3.org/2000/svg"
+        id="圖層_1"
+        version="1.1"
+        style="height: 100%; width: 100%; background: #22032e"
+        width="434px"
+        height="434px"
+      >
+        <g
+          class="ldl-scale"
+          style="
+            transform-origin: 50% 50%;
+            transform: rotate(0deg) scale(0.5, 0.5);
+          "
+        >
+          <g class="ldl-ani">
+            <g class="ldl-layer">
+              <g
+                class="ldl-ani"
+                style="
+                  transform-origin: 50px 50px;
+                  transform: scale(0.91);
+                  animation: 1.51515s linear -1.0101s infinite normal forwards running
+                    breathInOut;
+                "
+              >
+                <path
+                  fill="#333"
+                  d="M38.616 51.895h8.75c11.55 0 20.947-9.397 20.947-20.947S58.916 10 47.366 10H26.418v10.105h20.948c5.978 0 10.842 4.864 10.842 10.842s-4.864 10.842-10.842 10.842H26.418l-3.572 8.626L62.43 90h14.291L38.616 51.895z"
+                  style="fill: rgb(255, 255, 255)"
+                ></path>
+              </g>
+            </g>
+            <g class="ldl-layer">
+              <g class="ldl-ani">
+                <g>
+                  <g class="ldl-layer">
+                    <g
+                      class="ldl-ani"
+                      style="
+                        transform-origin: 50px 50px;
+                        transform: scale(0.91);
+                        animation: 1.51515s linear -1.26263s infinite normal forwards
+                          running breathInOut;
+                      "
+                    >
+                      <path
+                        d="M26.418 10h50.737v10.105H26.418z"
+                        fill="#333"
+                        style="fill: rgb(255, 255, 255)"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g class="ldl-layer">
+              <g class="ldl-ani">
+                <g>
+                  <g class="ldl-layer">
+                    <g
+                      class="ldl-ani"
+                      style="
+                        transform-origin: 50px 50px;
+                        transform: scale(0.91);
+                        animation: 1.51515s linear -1.51515s infinite normal forwards
+                          running breathInOut;
+                      "
+                    >
+                      <path
+                        d="M26.418 25.579h50.737v10.105H26.418z"
+                        fill="#333"
+                        style="fill: rgb(255, 255, 255)"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <!-- Start Screen -->
+    <div class="container container-1">
+      <div class="wrapper">
+        <div class="initial-text">
+          <h1 class="line">It's your</h1>
+          <h1 class="line"><span class="text-primary">Money</span></h1>
+          <h1 class="line">Own it.</h1>
+        </div>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name" autofocus/>
+        <button type="submit" class="start">Start<span>-></span></button>
+      </div>
+    </div>
+    <!-- Main Screen -->
+    <div class="container container-2 none">
+      <div class="wrapper wrapper-main">
+        <div class="profile">
+          <i class="fas fa-user-ninja item"></i>
+          <i class="fas fa-user-minus none" id="user-minus-icon"></i>
+          <i class="fas fa-user-edit none" id="user-edit-icon"></i>
+          <div class="wrap-text">
+            <p class="item">Welcome!</p>
+            <h1 class="item username">Jolly</h1>
+          </div>
+        </div>
+        <button class="tick none" aria-label="Tick Button">
+          <i class="fas fa-check"></i>
+        </button>
+        <button class="add" aria-label="Add Transaction">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button class="delete" aria-label="Remove Transaction">
+          <i class="fas fa-trash"></i>
+        </button>
+        <!-- <button class="search" aria-label="Search Transaction">
+          <i class="fas fa-search"></i>
+        </button> -->
+        <button class="edit" aria-label="Edit Transaction">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+        <!-- <button class="sort" aria-label="Sort Transactions">
+          <i class="fas fa-sort"></i>
+        </button> -->
+
+        <div class="details">
+          <div class="total">
+            <p>Total Balance</p>
+            <strong class="totalBalance">₹ 0</strong>
+          </div>
+          <div class="detail">
+            <div class="income">
+              <p>Income</p>
+              <strong class="incomeBalance">₹ 0</strong>
+            </div>
+            <div class="expense">
+              <p>Expense</p>
+              <strong class="expenseBalance">₹ 0</strong>
+            </div>
+          </div>
+          <p class="savingsMsg none">A penny saved is a penny earned.</p>
+        </div>
+        <div class="transactions">
+          <p class="tr">Transactions</p>
+          <div class="transaction-list"></div>
+        </div>
+      </div>
+    </div>
+    <!--Add/Edit Modal -->
+    <div class="modal none">
+      <div class="modal-content">
+        <div class="close-modal">&times;</div>
+        <div class="contents">
+          <h1 class="add-h1">Add Transaction</h1>
+          <h1 class="none edit-h1">Edit Transaction</h1>
+          <table class="modal-bottom">
+            <tr>
+              <td>
+                <label for="income">Income</label>
+                <input
+                  type="radio"
+                  onclick="checkRadioModal();"
+                  id="income"
+                  name="mode"
+                />
+              </td>
+              <td>
+                <label for="expense">Expense</label>
+                <input
+                  type="radio"
+                  onclick="checkRadioModal();"
+                  id="expense"
+                  name="mode"
+                  checked="true"
+                />
+              </td>
+            </tr>
+            <tr class="expense-mode">
+              <td class="type">
+                <label for="type">Expense Type</label>
+              </td>
+              <td class="type">
+                <select name="type" id="expense-type">
+                  <option value="food">Food</option>
+                  <option value="recharge">Recharge</option>
+                  <option value="insurance">Insurance</option>
+                  <option value="shopping">Shopping</option>
+                  <option value="travel">Travel</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="medical">Medical</option>
+                  <option value="electricity">Electricity</option>
+                  <option value="water">Water Bill</option>
+                  <option value="other">Miscellaneous</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="amount">Amount</label>
+              </td>
+              <td>
+                <input type="number" id="amount" placeholder="Add amount" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="note">Note</label>
+              </td>
+              <td>
+                <textarea
+                  name="note" id="note" placeholder="Add Note"
+                ></textarea>
+              </td>
+            </tr>
+          </table>
+          <div class="button">
+            <button class="btn add-btn" type="submit">Add Transaction</button>
+            <button class="btn save-btn none" type="submit">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="delete-modal none">
+      <div class="delete-modal-content">
+        <p class="delete-question">Do you want to delete your profile?</p>
+        <button class="delete-yes" type="submit">Yes</button>
+        <button class="delete-no" type="submit">No</button>
+      </div>
+    </div>
+    <!-- Edit Modal -->
+    <div class="edit-modal none">
+      <div class="edit-modal-content">
+        <p class="edit-question">Edit Profile Name</p>
+        <div>
+          <input type="text" class="edit-input" />
+        </div>
+        <button class="edit-yes" type="submit">Save</button>
+        <button class="edit-no" type="submit">Cancel</button>
+      </div>
+    </div>
+    <!-- Font-Awesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/107826f452.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Main Script -->
+    <script defer src="script.js"></script>
+  </body>
+</html>
